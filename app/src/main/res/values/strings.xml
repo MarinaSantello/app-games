@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">app game</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome!</string>
+    <string name="text">With our app it will be much easier and more fun to keep track of your games!</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember me</string>
+    <string name="enter">Enter</string>
+    <string name="create">Create an account</string>
+    <string name="copyright">Developed by DS2M</string>
+
+    <string name="games">Games</string>
+    <string name="title_new">New account</string>
+    <string name="title_photo">Let\'s we choose a photo?</string>
+</resources>
