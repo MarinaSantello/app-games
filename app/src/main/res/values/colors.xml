@@ -14,6 +14,6 @@
     <color name="blue_detail">#0099FF</color>
     <color name="color_text">#A8A8A8</color>
     <color name="color_text02">#E5E5E5</color>
-    <color name="color_transparent">#A8A8A8f</color>
+    <color name="color_transparent">#0000</color>
 
 </resources>

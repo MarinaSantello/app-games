@@ -13,4 +13,15 @@
     <string name="games">Games</string>
     <string name="title_new">New account</string>
     <string name="title_photo">Let\'s we choose a photo?</string>
+    <string name="title_data">Data for authentication</string>
+    <string name="title_personal_data">Personal data</string>
+    <string name="name">What\'s your name?</string>
+    <string name="city">What\'s your city?</string>
+    <string name="birth_date">Birth date</string>
+    <string name="gamer_level">What\'s your gamer level?</string>
+    <string name="console">What\'s your favorite console?</string>
+    <string name="genre">Genre:</string>
+    <string name="fem">Feminine</string>
+    <string name="male">Male</string>
+
 </resources>

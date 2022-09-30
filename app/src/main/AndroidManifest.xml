@@ -14,6 +14,9 @@
         android:theme="@style/Theme.AppGame"
         tools:targetApi="31">
         <activity
+            android:name=".UserGamesActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserDataActivity"
             android:exported="false" />
         <activity

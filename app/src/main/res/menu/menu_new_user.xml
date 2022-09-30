@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_save"
+        android:title="Salvar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_save_24"
+        />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="Configurações"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_exit"
+        android:title="Sair"
+        />
+    <!-- app:showAsAction="ifRoom"-->
+
+</menu>
