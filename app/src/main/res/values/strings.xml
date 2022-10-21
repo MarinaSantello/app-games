@@ -24,4 +24,21 @@
     <string name="fem">Feminine</string>
     <string name="male">Male</string>
 
+    <string name="games_finished">Games Finished</string>
+    <string name="currently_playing">Currently Playing</string>
+    <string name="age">Age</string>
+
+    <string name="your_games">Your registered games</string>
+
+    <string-array name="consoles">
+        <item>PlayStation 5</item>
+        <item>PlayStation 4</item>
+        <item>PlayStation 3</item>
+        <item>XBox One</item>
+        <item>XBox 360</item>
+        <item>Nintendo Switch</item>
+        <item>Super Nintendo</item>
+        <item>Nintendo 6</item>
+    </string-array>
+
 </resources>
