@@ -50,7 +50,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/textEmailPerson"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="nome@gmail.com"
@@ -70,7 +70,7 @@
                         app:cardCornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintStart_toEndOf="@+id/textEmailPerson"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView

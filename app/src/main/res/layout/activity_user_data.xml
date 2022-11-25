@@ -49,6 +49,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -203,7 +204,7 @@
                 android:paddingStart="8dp"
                 android:textSize="14sp"
                 app:layout_constraintTop_toBottomOf="@+id/editText_city"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="29dp" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -224,6 +225,7 @@
                 android:valueFrom="1"
                 android:valueTo="27"
                 app:layout_constraintEnd_toStartOf="@+id/textView_statusLevel"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/textView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -260,24 +262,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-            <RadioButton
-                android:id="@+id/radio_fem"
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/fem"
-                android:textColor="@color/color_text"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="@+id/textView14"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14">
 
-            <RadioButton
-                android:id="@+id/radio_male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="@string/male"
-                android:textColor="@color/color_text"
-                app:layout_constraintStart_toEndOf="@+id/radio_fem"
-                app:layout_constraintTop_toTopOf="@+id/radio_fem" />
+                <RadioButton
+                    android:id="@+id/radio_fem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fem"
+                    android:textColor="@color/color_text" />
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="@string/male"
+                    android:textColor="@color/color_text" />
+            </RadioGroup>
 
             <Spinner
                 android:id="@+id/spinner"

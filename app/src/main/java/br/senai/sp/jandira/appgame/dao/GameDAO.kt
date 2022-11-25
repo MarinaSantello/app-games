@@ -20,11 +20,15 @@ interface GameDAO {
     fun update(game: AccountUser): Int
 
     // Anotação responsável por fazer o método 'getAll' retornar uma lista com todos os contatos da tabela de contatos, em ordem alfabética
-    @Query("select * from tbl_accountUser order by name asc")
+    @Query("select * from tbl_accountUser order by id")
     fun getAll(): List<AccountUser>
 
     // Anotação responsável por fazer o método 'getContactByID' retornar um contato do banco
     @Query("SELECT * FROM tbl_accountUser WHERE id = :id") // ':id'- parâmetro que recebe informação do argumento do método 'getContactByID'
     fun getAccountUserByID(id: Int): AccountUser
+
+//    // Anotação responsável por fazer o método 'getContactByID' retornar um contato do banco
+//    @Query("SELECT * FROM tbl_accountUser WHERE email = :email and password = :password") // ':id'- parâmetro que recebe informação do argumento do método 'getContactByID'
+//    fun getAccountUser(email: String, password: String): AccountUser
 
 }

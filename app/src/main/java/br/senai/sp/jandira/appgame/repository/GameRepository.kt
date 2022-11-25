@@ -4,6 +4,7 @@ import android.content.Context
 import br.senai.sp.jandira.appgame.dao.GameDAO
 import br.senai.sp.jandira.appgame.dao.GameDB
 import br.senai.sp.jandira.appgame.model.AccountUser
+//import br.senai.sp.jandira.appgame.model.Console
 
 class GameRepository(context: Context) {
 
@@ -30,8 +31,12 @@ class GameRepository(context: Context) {
     }
 
     // função que solicita um usuário expecífico, a partir do ID do registro, que retorna o contato requerido
-    fun getContactByID(id: Int): AccountUser {
+    fun getAccountUserByID(id: Int): AccountUser {
         return db.getAccountUserByID(id)
     }
+
+//    fun getAccountUser(email: String, password: String): AccountUser {
+//        return db.getAccountUser(email, password)
+//    }
 
 }

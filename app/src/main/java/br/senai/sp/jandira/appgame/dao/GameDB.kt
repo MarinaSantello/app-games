@@ -12,6 +12,8 @@ abstract class GameDB: RoomDatabase() {
 
     abstract fun gameDAO(): GameDAO
 
+//    abstract fun consoleDAO(): ConsoleDAO
+
     companion object {
         private lateinit var instance: GameDB
 
