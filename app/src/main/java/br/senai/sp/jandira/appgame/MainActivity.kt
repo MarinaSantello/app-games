@@ -3,18 +3,14 @@ package br.senai.sp.jandira.appgame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import br.senai.sp.jandira.appgame.databinding.ActivityMainBinding
-import br.senai.sp.jandira.appgame.model.AccountUser
-import br.senai.sp.jandira.appgame.repository.GameRepository
+import br.senai.sp.jandira.appgame.repository.UserRepository
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-    lateinit var gameRepository: GameRepository
+    lateinit var gameRepository: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun validarLogin() {
         var i = 0
 
-        gameRepository = GameRepository(this)
+        gameRepository = UserRepository(this)
 
         val email = binding.editTextEmail.text.toString()
         val password = binding.editTextPassword.text.toString()
@@ -56,13 +52,13 @@ class MainActivity : AppCompatActivity() {
 
                 break
             }
-            else if (i < accountUsers.size) {
-                i++
-            }
-            else {
+
+            else if (i > accountUsers.size) {
                 Toast.makeText(this, "email ou senha incorretos.", Toast.LENGTH_SHORT).show()
                 break
             }
+
+            i++
         }
     }
 }

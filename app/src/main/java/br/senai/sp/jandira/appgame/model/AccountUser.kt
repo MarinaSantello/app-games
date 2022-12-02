@@ -24,5 +24,5 @@ class AccountUser {
 
     var gender = 'I' // Char é '', 1 caracter
 //    var console: Console? = null
-    var level = EnumLevel.BEGINNER // valor padrão de inicio
+    var level = "" // valor padrão de inicio
 }

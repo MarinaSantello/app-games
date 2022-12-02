@@ -1,12 +1,11 @@
 package br.senai.sp.jandira.appgame.repository
 
 import android.content.Context
-import br.senai.sp.jandira.appgame.dao.GameDAO
 import br.senai.sp.jandira.appgame.dao.GameDB
 import br.senai.sp.jandira.appgame.model.AccountUser
 //import br.senai.sp.jandira.appgame.model.Console
 
-class GameRepository(context: Context) {
+class UserRepository(context: Context) {
 
     private val db = GameDB.getDataBase(context).gameDAO()
 

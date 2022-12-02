@@ -5,7 +5,7 @@ import br.senai.sp.jandira.appgame.model.AccountUser
 
 // Anotação responsável por indicar que o ROOM deve gerenciar a classe como um DAO
 @Dao
-interface GameDAO {
+interface UserDAO {
 
     // Anotação responsável por fazer o método 'save' retornar o id do contato gerado no banco (retorno importante para controle de sucesso da execução)
     @Insert

@@ -223,7 +223,7 @@
                 android:layout_height="wrap_content"
                 android:stepSize="1"
                 android:valueFrom="1"
-                android:valueTo="27"
+                android:valueTo="4"
                 app:layout_constraintEnd_toStartOf="@+id/textView_statusLevel"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/textView11"

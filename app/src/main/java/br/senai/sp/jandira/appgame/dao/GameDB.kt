@@ -10,7 +10,8 @@ import br.senai.sp.jandira.appgame.model.AccountUser
 @Database(entities = [AccountUser::class], version = 1)
 abstract class GameDB: RoomDatabase() {
 
-    abstract fun gameDAO(): GameDAO
+    abstract fun gameDAO(): UserDAO
+    abstract fun consoleDAO(): ConsoleDAO
 
 //    abstract fun consoleDAO(): ConsoleDAO
 
@@ -32,5 +33,4 @@ abstract class GameDB: RoomDatabase() {
             return instance
         }
     }
-
 }

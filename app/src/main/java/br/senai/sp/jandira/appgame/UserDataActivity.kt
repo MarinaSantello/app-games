@@ -7,17 +7,20 @@ import android.view.MenuItem
 import android.widget.Toast
 import br.senai.sp.jandira.appgame.databinding.ActivityUserDataBinding
 import br.senai.sp.jandira.appgame.model.AccountUser
+import br.senai.sp.jandira.appgame.model.Console
+import br.senai.sp.jandira.appgame.model.EnumLevel
+import br.senai.sp.jandira.appgame.repository.ConsoleRepository
 //import br.senai.sp.jandira.appgame.model.Console
 //import br.senai.sp.jandira.appgame.repository.ConsoleRepository
-import br.senai.sp.jandira.appgame.repository.GameRepository
+import br.senai.sp.jandira.appgame.repository.UserRepository
 
 class UserDataActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityUserDataBinding
-    lateinit var gameRepository: GameRepository
+    lateinit var gameRepository: UserRepository
     lateinit var accountUser: AccountUser
-//    lateinit var consoleRepository: ConsoleRepository
-//    lateinit var console: Console
+    lateinit var consoleRepository: ConsoleRepository
+    lateinit var console: Console
 
 //    private var id = 0
 
@@ -28,6 +31,8 @@ class UserDataActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         accountUser = AccountUser()
+
+
 //        console = Console()
 
 //        insertConsole()
@@ -75,12 +80,28 @@ class UserDataActivity : AppCompatActivity() {
     }
 
     private fun save() {
-        gameRepository = GameRepository(this)
+        gameRepository = UserRepository(this)
 
         accountUser.email = binding.editTextEmail.text.toString()
         accountUser.password = binding.editTextPassword.text.toString()
         accountUser.name = binding.editTextName.text.toString()
         accountUser.city = binding.editTextCity.text.toString()
+
+//        var levelSlider = ""
+
+        binding.slider.addOnChangeListener { _, value, _ ->
+            if (value.toInt() == 1){
+                accountUser.level = EnumLevel.BEGINNER.toString()
+            } else if (value.toInt() == 2){
+                accountUser.level = EnumLevel.BASIC.toString()
+            } else if (value.toInt() == 3){
+                accountUser.level = EnumLevel.CASUAL.toString()
+            } else if (value.toInt() == 4){
+                accountUser.level = EnumLevel.ADVANCED.toString()
+            }
+        }
+
+//        accountUser.level = levelSlider
 
         val option = binding.radioGroup!!.checkedRadioButtonId
 
@@ -90,7 +111,7 @@ class UserDataActivity : AppCompatActivity() {
 
         val id = gameRepository.save(accountUser)
 
-        Toast.makeText(this, "ID: ${option.toChar()}", Toast.LENGTH_LONG).show()
+//        Toast.makeText(this, "ID: ${option.toChar()}", Toast.LENGTH_LONG).show()
 
         finish()
     }
